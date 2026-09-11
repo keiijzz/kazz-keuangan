@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Keuangan Keluarga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="toaster" class="toaster"></div>
+
+  <nav id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </div>
+      <span class="logo-text">Keuangan<span class="logo-accent">Keluarga</span></span>
+    </div>
+    <ul class="nav-list">
+      <li class="nav-item" data-tab="dashboard"><span class="nav-icon">◧</span> Dashboard</li>
+      <li class="nav-item" data-tab="transaksi"><span class="nav-icon">◇</span> Transaksi</li>
+      <li class="nav-item" data-tab="dompet"><span class="nav-icon">◈</span> Dompet</li>
+      <li class="nav-item" data-tab="tagihan"><span class="nav-icon">▣</span> Tagihan</li>
+      <li class="nav-item" data-tab="hutang"><span class="nav-icon">≣</span> Hutang</li>
+      <li class="nav-item" data-tab="anggaran"><span class="nav-icon">◫</span> Anggaran</li>
+      <li class="nav-item" data-tab="aset"><span class="nav-icon">◭</span> Aset</li>
+      <li class="nav-item" data-tab="tujuan"><span class="nav-icon">◎</span> Tujuan</li>
+      <li class="nav-item" data-tab="tren"><span class="nav-icon">◠</span> Tren</li>
+      <li class="nav-item" data-tab="import"><span class="nav-icon">⇄</span> Import</li>
+    </ul>
+    <div class="sidebar-footer">
+      <div class="sidebar-note">Strict mode aktif</div>
+      <div class="sidebar-time" id="clock">--:--</div>
+    </div>
+  </nav>
+
+  <div id="main" class="main">
+    <div class="topbar">
+      <button class="menu-btn" onclick="toggleSidebar()"><span class="hamburger"></span></button>
+      <h2 id="page-title">Dashboard</h2>
+      <div class="topbar-right">
+        <button id="bell-btn" class="bell-btn" onclick="toggleAlerts()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span id="bell-badge" class="bell-badge hidden">0</span>
+        </button>
+        <div id="alert-panel" class="alert-panel"></div>
+      </div>
+    </div>
+    <div class="content" id="content"></div>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
